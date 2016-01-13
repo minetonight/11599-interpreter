@@ -8,17 +8,15 @@ class CardCalculator:
         self.personalDate = int(str(birthday)[0:2]) 
         self.personalNumber = 0
         self.personalNumberSimplified = 0
+        self.adjustment = 0
         
         self.addToCard(birthday, True)
-        self.adjustPersonalNumber(self.personalNumber) 
         self.personalNumberSimplified = self.simplifyNumber(self.personalNumber)
+        self.adjustPersonalNumber(self.personalNumber) 
         
         self.addToCard(self.personalNumber)
         
-        print(self.personalDate) 
-        print(self.personalNumber) 
-        print(self.personalNumberSimplified) 
-        print(self.personalCard) 
+        self.formatProcess() 
 
     
     def addToCard(self, number, addToPersonal=False):
@@ -51,26 +49,38 @@ class CardCalculator:
 
     def adjustPersonalNumber(self, num):
         year = int(str(self.birthday)[4:8]) 
-        print(year)
+        
+        if self.debug:
+            print(year)
         
         if year < 2000:
-            self.addToCard(2)
-            result = self.personalNumber - 2
-            self.addToCard(result) 
-            print (result) 
-            self.simplifyNumber(result) 
+            self.adjustment = -2
         else:
-            self.addToCard(19)
-            result = self.personalNumber + 19
-            self.addToCard(result) 
+            self.adjustment = 19
+            
+            
+        self.addToCard(abs(self.adjustment))
+        result = self.personalNumber + self.adjustment 
+        self.addToCard(result) 
+        if self.debug:
             print(result) 
-            self.simplifyNumber(result) 
+        self.simplifyNumber(result) 
+    
+    def formatProcess(self):
+        
+        print("%s = %s = %s") % (self.birthday, self.personalNumber, self.personalNumberSimplified) 
+        print("%s & %s = %s == %s") % ( self.personalNumber, self.adjustment, 0, 0) 
+        
+        print(self.personalDate) 
+        print(self.personalNumber) 
+        print(self.personalNumberSimplified) 
+        print(self.personalCard)
         
 #eof class
 
 
 
-birthday = 12121978 #input("Enter full birthday e.g. ddmmyyyy") 
+birthday = 12121976 #input("Enter full birthday e.g. ddmmyyyy") 
 print(birthday) 
 
 baseCard = [2,2,1,
