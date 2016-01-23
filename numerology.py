@@ -5,7 +5,7 @@ class CardCalculator:
         
         self.birthday = birthday
         self.personalCard = [0] * 10
-        self.personalDate = int(str(birthday)[0:2]) 
+        self.personalDate = int(birthday[0:2]) 
         self.personalNumber = 0
         self.personalNumberSimplified = 0
         self.adjustment = 0
@@ -78,17 +78,17 @@ class CardCalculator:
         
 #eof class
 
+if __name__ == "__main__":
 
+    birthday = "02121976" #input("Enter full birthday e.g. ddmmyyyy") 
+    print(birthday) 
 
-birthday = 12121976 #input("Enter full birthday e.g. ddmmyyyy") 
-print(birthday) 
-
-baseCard = [2,2,1,
-1,1,1,
-1,1,2] 
-
-
-calculator = CardCalculator(birthday)
+    baseCard = [2,2,1,
+    1,1,1,
+    1,1,2] 
+    
+    
+    calculator = CardCalculator(birthday)
 
 
 

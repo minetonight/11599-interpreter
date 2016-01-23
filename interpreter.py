@@ -14,8 +14,10 @@ class CardInterpreter:
         
 #eof class
 
-
-cardReader = CardInterpreter( [0, 2, 2,1,
-	1, 1, 1,
-	1, 1, 2] )
-cardReader.getFullInterpretation()
+if __name__ == "__main__":
+    cardReader = CardInterpreter( [0, 
+    	2, 2, 1,
+    	1, 1, 1,
+    	1, 1, 2] )
+    	
+    cardReader.getFullInterpretation()
