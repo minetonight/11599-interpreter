@@ -1,7 +1,8 @@
 class CardCalculator:
     
     def __init__(self, birthday):
-        self.debug = True
+        #self.debug = True
+        self.debug = False
         
         self.birthday = birthday
         self.personalCard = [0] * 10
@@ -61,26 +62,28 @@ class CardCalculator:
             
         self.addToCard(abs(self.adjustment))
         result = self.personalNumber + self.adjustment 
+        self.adjusted = result
+        
         self.addToCard(result) 
         if self.debug:
             print(result) 
-        self.simplifyNumber(result) 
+        self.adjustedSimple = self.simplifyNumber(result) 
     
     def formatProcess(self):
         
         print("%s = %s = %s") % (self.birthday, self.personalNumber, self.personalNumberSimplified) 
-        print("%s & %s = %s == %s") % ( self.personalNumber, self.adjustment, 0, 0) 
+        print("%s & %s = %s == %s") % ( self.personalNumber, self.adjustment, self.adjusted, self.adjustedSimple) 
         
         print(self.personalDate) 
-        print(self.personalNumber) 
-        print(self.personalNumberSimplified) 
+        #print(self.personalNumber) 
+        #print(self.personalNumberSimplified) 
         print(self.personalCard)
         
 #eof class
 
 if __name__ == "__main__":
 
-    birthday = "02121976" #input("Enter full birthday e.g. ddmmyyyy") 
+    birthday = "21111985" #input("Enter full birthday e.g. ddmmyyyy") 
     print(birthday) 
 
     baseCard = [2,2,1,

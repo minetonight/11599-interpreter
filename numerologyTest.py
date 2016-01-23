@@ -18,13 +18,13 @@ def test(birthday, referenceCard):
     return True
 
 
-test(21111985, 
+test("21111985", 
 [1,
 5, 4, 0,
 0, 1, 1,
 0, 3, 1]) 
 
-test(09051969,
+test("29091999",
 [1,
 5, 4, 0,
 0, 1, 1,

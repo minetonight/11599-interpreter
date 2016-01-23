@@ -14,7 +14,7 @@ class NumbersInterpreter:
     
 #eof class
 
-
-numReader = NumbersInterpreter() 
-numReader.getDateInterpretation(calculator.personalDate)
-numReader.getNumberInterpretation(calculator.personalNumberSimplified) )
+if __name__ == "__main__":
+    numReader = NumbersInterpreter() 
+    numReader.getDateInterpretation(calculator.personalDate)
+    numReader.getNumberInterpretation(calculator.personalNumberSimplified) )
