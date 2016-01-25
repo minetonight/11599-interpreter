@@ -1,26 +1,30 @@
 #:import Factory kivy.factory.Factory
 BoxLayout:
-    Button:
-        text: "go" 
+    orientation: 'vertical'
+    
     ScreenManager:
         id: sm
 
         Screen:
-            name: 'screen1'
+            name: 'dataInputScreen'
                 
-            AnchorLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                
                 Button:
                     size_hint: None, None
                     size: '150dp', '48dp'
-                    text: 'Go to screen 2'
-                    on_release: sm.current = 'screen2'
+                    text: 'Calculate'
+                    on_release: sm.current = 'cardScreen'
 
         Screen:
-            name: 'screen2'
+            name: 'cardScreen'
             
-            AnchorLayout:
+            BoxLayout:
+                orientation: 'vertical'
+            
                 Button:
                     size_hint: None, None
                     size: '150dp', '48dp'
-                    text: 'Go to screen 1'
-                    on_release: sm.current = 'screen1'
+                    text: 'New person'
+                    on_release: sm.current = 'dataInputScreen'
