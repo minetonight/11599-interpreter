@@ -1,0 +1,26 @@
+#:import Factory kivy.factory.Factory
+BoxLayout:
+    Button:
+        text: "go" 
+    ScreenManager:
+        id: sm
+
+        Screen:
+            name: 'screen1'
+                
+            AnchorLayout:
+                Button:
+                    size_hint: None, None
+                    size: '150dp', '48dp'
+                    text: 'Go to screen 2'
+                    on_release: sm.current = 'screen2'
+
+        Screen:
+            name: 'screen2'
+            
+            AnchorLayout:
+                Button:
+                    size_hint: None, None
+                    size: '150dp', '48dp'
+                    text: 'Go to screen 1'
+                    on_release: sm.current = 'screen1'
