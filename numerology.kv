@@ -1,5 +1,6 @@
 #-*-coding:utf8;-*-
 #:	import Factory kivy.factory.Factory
+#:import random random.random
 BoxLayout:
     orientation: 'vertical'
     
@@ -8,10 +9,33 @@ BoxLayout:
 
         Screen:
             name: 'dataInputScreen'
-                
+            #hue: random()
+            canvas:
+                Color:
+                    hsv: random(), .5, .3
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
             BoxLayout:
                 orientation: 'vertical'
+                columns: 1
+                padding: '5dp'
                 
+                Button:
+                    size_hint: None, None
+                    size: '150dp', '48dp'
+                    text: 'Архив ...'
+                    #on_release: sm.current = 'cardScreen'
+
+                
+                Label:
+                    #size_hint_y: None
+                    #height: '50dp'
+                    text: '[b]Нова карта[b]'
+                    font_size: '64dp'
+                    markup: 'True'
+                    
                 Label:
                     text:'Име'
                 
@@ -32,7 +56,16 @@ BoxLayout:
                         group: 'g_gender'
                     Label:
                         text: 'Жена'
-            
+                        
+                Label:
+                    text:'Дата на раждане'
+                
+                TextInput:
+                    size_hint_y: None
+                    height: '32dp'
+                    multiline: False
+                    text: ''
+
                 Button:
                     size_hint: None, None
                     size: '150dp', '48dp'
