@@ -21,6 +21,7 @@ BoxLayout:
                 orientation: 'vertical'
                 columns: 1
                 padding: '5dp'
+                spacing: 5 
                 
                 Button:
                     size_hint: None, None
@@ -70,7 +71,9 @@ BoxLayout:
                     size_hint: None, None
                     size: '150dp', '48dp'
                     text: 'Calculate'
-                    on_release: sm.current = 'cardScreen'
+                    on_release: 
+                        sm.transition.direction = 'left'
+                        sm.current = 'cardScreen'
 
         Screen:
             name: 'cardScreen'
@@ -82,4 +85,6 @@ BoxLayout:
                     size_hint: None, None
                     size: '150dp', '48dp'
                     text: 'New person'
-                    on_release: sm.current = 'dataInputScreen'
+                    on_release: 
+                        sm.transition.direction = 'right'
+                        sm.current = 'dataInputScreen'
