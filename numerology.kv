@@ -38,7 +38,8 @@ BoxLayout:
                     markup: 'True'
                     
                 Label:
-                    text:'Име'
+                    halign: 'left'
+                    text:'Име:'
                 
                 TextInput:
                     size_hint_y: None
@@ -57,9 +58,14 @@ BoxLayout:
                         group: 'g_gender'
                     Label:
                         text: 'Жена'
-                        
+                    
+                    CheckBox:
+                        group: 'g_gender'
+                    Label:
+                        text: 'Случай'
+                    
                 Label:
-                    text:'Дата на раждане'
+                    text:'Дата:'
                 
                 TextInput:
                     size_hint_y: None
@@ -85,12 +91,99 @@ BoxLayout:
             BoxLayout:
                 orientation: 'vertical'
                 
-                GridLayout:
-                    size_hint: 1, 7/8.0
+                Label:
+                    text:'[b]Името[b]'
+                    size_hint: 1, 1/12.0
+                    font_size: '32dp'
+                    markup: 'True' 
                 
+                BoxLayout:
+                    orientation: 'horizontal'              
+                    size_hint: 1, 1/9.0
+                    
+                    
+                    Button:
+                        text:'21'
+                        size_hint: 0.1, 1
+                    Label:
+                        text: '21111985 = 28 = 10\n                       -2\n                      26 = 8'
+                        size_hint: 0.8, 1
+                    Button:
+                        text:'10' 
+                        size_hint: 0.1, 1
+                
+                GridLayout:
+                    #size_hint: 1, 7/9.0
+                    rows: 5
+                    cols: 5
+                    spacing: 5
+                    padding: 5
+                    
+                    Button:
+                        text: 'grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '3 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '5 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: 'grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '3 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '5 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: 'grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '3 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '5 grid' 
+                        
+                    Button:
+                        text: 'test'
+                        
+                    Button:
+                        text: 'grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '3 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    Button:
+                        text: '5 grid' 
+                        
+                    Button:
+                        text: 'test'
+                    
                 Button:
                     #size_hint: None, None
-                    size_hint: .9, 1/8.0
+                    size_hint: 1, 1/9.0
                     #size: '150dp', '48dp'
                     text: 'Нова карта'
                     on_release: 
