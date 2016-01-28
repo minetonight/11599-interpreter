@@ -1,5 +1,6 @@
 #-*-coding:utf8;-*-
 from os.path import join, dirname
+from meaningHelper import getMeaning
 
 class CardInterpreter:
 
@@ -13,30 +14,6 @@ class CardInterpreter:
     
     #eof def getFullInterpretation
     
-    @staticmethod
-    def getMeaning(basename):
-        # get any files into images directory
-        curdir = dirname(__file__)
-        filename = join(curdir, 'meanings', basename+".py")
-        try:
-            f = open(filename, "r") 
-        except IOError:
-            f = open(filename, "w+r") 
-            f.write("buf = 'още няма данни, попълни "+basename+"' ") 
-            f.flush()
-            f.seek(0)
-            
-        contents = f.read() 
-        #print(contents)
-        f.close()
-        
-        #http://lucumr.pocoo.org/2011/2/1/exec-in-python/
-        exec(contents) 
-        # buf is defined in the file 
-        return buf 
-        
-    #eof getMeaning(filename):
-
 
 #eof class
 
@@ -47,5 +24,5 @@ if __name__ == "__main__":
     	1, 1, 2] )
     	
     cardReader.getFullInterpretation()
-    print (cardReader.getMeaning("test")) 
+    print (getMeaning(cardReader.card, "test")) 
     print ("Done") 
