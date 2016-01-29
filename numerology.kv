@@ -4,15 +4,13 @@
 
 
 <GridButton@Button>:
-    on_press: root._parent.gridButtonPress(self)
-    on_release: root._parent.gridButtonPress(self)
+    on_press: root.controller.gridButtonPress(self)
+    on_release: root.controller.gridButtonRelease(self)
     
 <Controller>:
     orientation: 'vertical'
     
-    id: ctrlr
-    
-    #define all conlrols' ids
+    #define needed conlrols' ids
     t_name: t_name
     t_date: t_date
     
@@ -146,7 +144,14 @@
                     GridButton:
                         text: 'GB test'
                         name: 'GB1'
+                        id: GB1
                         
+                    GridButton:
+                        text: 'v'
+                        name: 'GB2'
+                        id: GB2
+                        
+
                     Button:
                         text: '3 grid' 
                         
