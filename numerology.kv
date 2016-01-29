@@ -1,8 +1,13 @@
 #-*-coding:utf8;-*-
 #:	import Factory kivy.factory.Factory
 #:import random random.random
-BoxLayout:
+
+<Controller>:
     orientation: 'vertical'
+    
+    #define all conlrols' ids
+    t_name: t_name
+    t_date: t_date
     
     ScreenManager:
         id: sm
@@ -27,7 +32,7 @@ BoxLayout:
                     size_hint: None, None
                     size: '150dp', '48dp'
                     text: 'Архив ...'
-                    #on_release: sm.current = 'cardScreen'
+                    on_release: root.on_archive() 
 
                 
                 Label:
@@ -46,24 +51,32 @@ BoxLayout:
                     height: '32dp'
                     multiline: False
                     text: ''
+                    id: t_name
                 
                 BoxLayout:
                     orientation: 'horizontal'
+                    
                     CheckBox:
                         group: 'g_gender'
+                        on_release: root.g_type = 'male'
+                        active: True if root.g_type == 'male' else False
                     Label:
                         text: 'Мъж'
 
                     CheckBox:
-                        group: 'g_gender'
+                        group: 'g_gender' 
+                        on_release: root.g_type = 'female'
+                        active: True if root.g_type == 'female' else False
                     Label:
                         text: 'Жена'
-                    
+                        
                     CheckBox:
                         group: 'g_gender'
+                        on_release: root.g_type = 'event'
+                        active: True if root.g_type == 'event' else False
                     Label:
                         text: 'Случай'
-                    
+                        
                 Label:
                     text:'Дата:'
                 
@@ -72,6 +85,7 @@ BoxLayout:
                     height: '32dp'
                     multiline: False
                     text: ''
+                    id: t_date
 
                 Button:
                     size_hint: None, None
