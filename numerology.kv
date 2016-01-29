@@ -2,12 +2,21 @@
 #:	import Factory kivy.factory.Factory
 #:import random random.random
 
+
+<GridButton@Button>:
+    on_press: root._parent.gridButtonPress(self)
+    on_release: root._parent.gridButtonPress(self)
+    
 <Controller>:
     orientation: 'vertical'
+    
+    id: ctrlr
     
     #define all conlrols' ids
     t_name: t_name
     t_date: t_date
+    
+
     
     ScreenManager:
         id: sm
@@ -133,11 +142,11 @@
                     spacing: 5
                     padding: 5
                     
-                    Button:
-                        text: 'grid' 
                         
-                    Button:
-                        text: 'test'
+                    GridButton:
+                        text: 'GB test'
+                        name: 'GB1'
+                        
                     Button:
                         text: '3 grid' 
                         

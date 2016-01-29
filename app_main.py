@@ -7,6 +7,9 @@ from kivy.app import App
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.button import Button
 
+class GridButton(Button):
+   _parent = None
+
 class Controller(BoxLayout):
     
     t_name = ObjectProperty() 
@@ -28,7 +31,11 @@ class Controller(BoxLayout):
     def on_loadArchive(self):
         pass 
         
-    
+    def gridButtonPress(self, btn):
+        print("grid Button press")
+        print("btn is " + str( btn.name ) )
+        
+         
 #eof class
 
 
@@ -36,7 +43,9 @@ class Controller(BoxLayout):
 class NumerologyApp(App):
     
     def build(self):
-        return Controller() 
+        ctrl = Controller()
+        GridButton._parent = ctrl
+        return ctrl
     
     def on_pause(self):
         # when you are going on pause, don't forget to stop using resources 
