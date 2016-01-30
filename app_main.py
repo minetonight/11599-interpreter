@@ -39,7 +39,7 @@ class Controller(BoxLayout):
         print("grid Button press")
         print("btn is " + str(btn.name) )
         self.ids[btn.name].text += '1'
-    
+        #self.ids["GB2"].text = "PUSH"
     
     def gridButtonRelease(self, btn):
         pass

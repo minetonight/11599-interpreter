@@ -113,7 +113,7 @@
                 orientation: 'vertical'
                 
                 Label:
-                    text:'[b]Името[b]'
+                    text:'[b]' + t_name.text + '[b]'
                     size_hint: 1, 1/12.0
                     font_size: '32dp'
                     markup: 'True' 
@@ -123,14 +123,19 @@
                     size_hint: 1, 1/9.0
                     
                     
-                    Button:
+                    GridButton:
                         text:'21'
+                        name: 'date_number' 
+                        id: date_number
                         size_hint: 0.1, 1
                     Label:
                         text: '21111985 = 28 = 10\n                       -2\n                      26 = 8'
+                        id: cardStr_label
                         size_hint: 0.8, 1
-                    Button:
-                        text:'10' 
+                    GridButton:
+                        text: '10' 
+                        name: 'personal_number' 
+                        id: personal_number
                         size_hint: 0.1, 1
                 
                 GridLayout:
@@ -140,74 +145,149 @@
                     spacing: 5
                     padding: 5
                     
+                    # start row 1
                         
                     GridButton:
-                        text: 'GB test'
+                        text: '?'
                         name: 'GB1'
                         id: GB1
                         
                     GridButton:
-                        text: 'v'
-                        name: 'GB2'
-                        id: GB2
+                        text: '|\nV'
+                        name: 'self_col'
+                        id: self_col
                         
-
-                    Button:
-                        text: '3 grid' 
+                    GridButton:
+                        text: '|\nV'
+                        name: 'others_col'
+                        id: others_col
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '5 grid' 
+                    GridButton:
+                        text: '|\nV'
+                        name: 'higherself_col'
+                        id: higherself_col
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: 'grid' 
+                    GridButton:
+                        text: "_\n/'"
+                        name: 'emotional_diag'
+                        id: emotional_diag
+                    
+                    #
+                    # row 2 start
+                    # 
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '3 grid' 
+                    GridButton:
+                        text: '?'
+                        name: 'GB6'
+                        id: GB6
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '5 grid' 
+                    GridButton:
+                        text: '1'
+                        name: 'one'
+                        id: one
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: 'grid' 
+                    GridButton:
+                        text: '4'
+                        name: 'four'
+                        id: four
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '3 grid' 
+                    GridButton:
+                        text: '7'
+                        name: 'seven'
+                        id: seven
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '5 grid' 
+                    GridButton:
+                        text: '?'
+                        name: 'GB10'
+                        id: GB10
                         
-                    Button:
-                        text: 'test'
+                    #
+                    # start row 3
+                    # 
+                    
+                    GridButton:
+                        text: '?'
+                        name: 'GB11'
+                        id: GB11
                         
-                    Button:
-                        text: 'grid' 
+                    GridButton:
+                        text: '2'
+                        name: 'two'
+                        id: two
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '3 grid' 
+                    GridButton:
+                        text: '5'
+                        name: 'five'
+                        id: five
                         
-                    Button:
-                        text: 'test'
-                    Button:
-                        text: '5 grid' 
+                    GridButton:
+                        text: '8'
+                        name: 'eight'
+                        id: eight
                         
-                    Button:
-                        text: 'test'
+                    GridButton:
+                        text: '?'
+                        name: 'GB15'
+                        id: GB15
+                        
+                    #
+                    # start row 4
+                    # 
+                    
+                    GridButton:
+                        text: '?'
+                        name: 'GB16'
+                        id: GB16
+                        
+                    GridButton:
+                        text: '3'
+                        name: 'three'
+                        id: three
+                        
+                    GridButton:
+                        text: '6'
+                        name: 'six'
+                        id: six
+                        
+                    GridButton:
+                        text: '99'
+                        name: 'nine'
+                        id: nine
+                        
+                    GridButton:
+                        text: '?'
+                        name: 'GB20'
+                        id: GB20
+                        
+                    #
+                    # start row 5
+                    # 
+                    
+                    GridButton:
+                        text: '?'
+                        name: 'GB21'
+                        id: GB21
+                        
+                    GridButton:
+                        text: '? '
+                        name: 'none'
+                        id: none
+                        
+                    GridButton:
+                        text: ''
+                        name: 'nfour'
+                        id: nfour
+                        
+                    GridButton:
+                        text: ''
+                        name: 'nseven'
+                        id: nseven
+                        
+                    GridButton:
+                        text: '?'
+                        name: 'GB25'
+                        id: GB25
+                    
                     
                 Button:
                     #size_hint: None, None
