@@ -7,13 +7,13 @@
     on_press: root.controller.gridButtonPress(self)
     on_release: root.controller.gridButtonRelease(self)
     
+    
 <Controller>:
     orientation: 'vertical'
     
     #define needed conlrols' ids
     t_name: t_name
     t_date: t_date
-    
 
     
     ScreenManager:
@@ -57,7 +57,7 @@
                     size_hint_y: None
                     height: '32dp'
                     multiline: False
-                    text: ''
+                    text: 'Test' if root.debug else str('')
                     id: t_name
                 
                 BoxLayout:
@@ -91,16 +91,21 @@
                     size_hint_y: None
                     height: '32dp'
                     multiline: False
-                    text: ''
+                    text: '21111985' if root.debug else str('') 
                     id: t_date
 
                 Button:
                     size_hint: None, None
                     size: '150dp', '48dp'
                     text: 'Към картата'
-                    on_release: 
+                    on_press:
+                        root.processInput()
                         sm.transition.direction = 'left'
+                        
+                    on_release: 
                         sm.current = 'cardScreen'
+                        
+                            
 
         
         
@@ -139,11 +144,10 @@
                         size_hint: 0.1, 1
                 
                 GridLayout:
-                    #size_hint: 1, 7/9.0
                     rows: 5
                     cols: 5
-                    spacing: 5
-                    padding: 5
+                    spacing: 10
+                    padding: 35
                     
                     # start row 1
                         
@@ -206,9 +210,9 @@
                     # 
                     
                     GridButton:
-                        text: '?'
-                        name: 'GB11'
-                        id: GB11
+                        text: ''
+                        name: 'zero'
+                        id: zero
                         
                     GridButton:
                         text: '2'
@@ -226,7 +230,7 @@
                         id: eight
                         
                     GridButton:
-                        text: '?'
+                        text: '<--'
                         name: 'GB15'
                         id: GB15
                         

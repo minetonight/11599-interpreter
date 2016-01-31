@@ -22,8 +22,11 @@ def getMeaning(card, sectionName):
     # buf is defined in the file 
     return buf 
         
-#eof getMeaning(filename):
+#eof getMeaning(filename)
 
+
+def archiveReading():
+    pass
 
 if __name__ == "__main__":
     card = [0, 

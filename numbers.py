@@ -1,3 +1,4 @@
+@deprecated 
 class NumbersInterpreter:
     
     def __init__(self):

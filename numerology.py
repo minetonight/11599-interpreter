@@ -5,7 +5,7 @@ class CardCalculator:
         self.debug = False
         
         self.birthday = birthday
-        self.personalCard = [0] * 10
+        self.card = [0] * 10
         self.personalDate = int(birthday[0:2]) 
         self.personalNumber = 0
         self.personalNumberSimplified = 0
@@ -25,7 +25,7 @@ class CardCalculator:
         
         for num in strNum:
             num = int(num)
-            self.personalCard[num] += 1
+            self.card[num] += 1
         
     
             if self.debug:
@@ -77,7 +77,7 @@ class CardCalculator:
         print(self.personalDate) 
         #print(self.personalNumber) 
         #print(self.personalNumberSimplified) 
-        print(self.personalCard)
+        print(self.card)
         
 #eof class
 
