@@ -6,6 +6,11 @@
 <GridButton@Button>:
     on_press: root.controller.gridButtonPress(self)
     on_release: root.controller.gridButtonRelease(self)
+
+<CardButton@GridButton>:
+    #font_size: '16dp'
+    color: 1, 1, 0, 0.5
+    bold: True 
     
     
 <Controller>:
@@ -21,7 +26,6 @@
 
         Screen:
             name: 'dataInputScreen'
-            #hue: random()
             canvas:
                 Color:
                     hsv: random(), .5, .3
@@ -33,35 +37,40 @@
                 orientation: 'vertical'
                 columns: 1
                 padding: '5dp'
-                spacing: 5 
+                #spacing: 5
                 
-                Button:
-                    size_hint: None, None
-                    size: '150dp', '48dp'
-                    text: 'Архив ...'
-                    on_release: root.on_archive() 
-
                 
                 Label:
                     #size_hint_y: None
                     #height: '50dp'
-                    text: '[b]Нова карта[b]'
+                    text: 'Нова карта'
                     font_size: '64dp'
-                    markup: 'True'
+                    bold: True
                     
                 Label:
                     halign: 'left'
-                    text:'Име:'
+                    text: 'Име:'
                 
                 TextInput:
-                    size_hint_y: None
-                    height: '32dp'
+                    size_hint_y: 0.8
                     multiline: False
                     text: 'Test' if root.debug else str('')
                     id: t_name
                 
+                
+                Label:
+                    #size_hint_y: 0.5
+                    text: 'Дата:'
+                
+                TextInput:
+                    size_hint_y: 0.8           
+                    multiline: False
+                    text: '21111985' if root.debug else str('') 
+                    id: t_date
+
+    
                 BoxLayout:
-                    orientation: 'horizontal'
+                    orientation: 'horizontal' 
                     
                     CheckBox:
                         group: 'g_gender'
@@ -83,20 +92,25 @@
                         active: True if root.g_type == 'event' else False
                     Label:
                         text: 'Случай'
-                        
-                Label:
-                    text:'Дата:'
                 
-                TextInput:
-                    size_hint_y: None
-                    height: '32dp'
-                    multiline: False
-                    text: '21111985' if root.debug else str('') 
-                    id: t_date
+                
+                
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    size_hint_y: 5
+                    
+                    
+                    Button:
+                        size_hint: None, None
+                        size: '150dp', '48dp'
+                        text: 'Архив ...'
+                        on_release: root.on_archive() 
 
+            
                 Button:
-                    size_hint: None, None
-                    size: '150dp', '48dp'
+                    size_hint_y: None
+                    size_y: '58dp'
                     text: 'Към картата'
                     on_press:
                         root.processInput()
@@ -116,12 +130,13 @@
             
             BoxLayout:
                 orientation: 'vertical'
+                padding: '5dp'
                 
                 Label:
-                    text:'[b]' + t_name.text + '[b]'
+                    text: t_name.text
                     size_hint: 1, 1/12.0
                     font_size: '32dp'
-                    markup: 'True' 
+                    bold: True 
                 
                 BoxLayout:
                     orientation: 'horizontal'              
@@ -185,17 +200,17 @@
                         name: 'GB6'
                         id: GB6
                         
-                    GridButton:
+                    CardButton:
                         text: '1'
                         name: 'one'
                         id: one
                         
-                    GridButton:
+                    CardButton:
                         text: '4'
                         name: 'four'
                         id: four
                         
-                    GridButton:
+                    CardButton:
                         text: '7'
                         name: 'seven'
                         id: seven
@@ -214,17 +229,17 @@
                         name: 'zero'
                         id: zero
                         
-                    GridButton:
+                    CardButton:
                         text: '2'
                         name: 'two'
                         id: two
                         
-                    GridButton:
+                    CardButton:
                         text: '5'
                         name: 'five'
                         id: five
                         
-                    GridButton:
+                    CardButton:
                         text: '8'
                         name: 'eight'
                         id: eight
@@ -243,17 +258,17 @@
                         name: 'GB16'
                         id: GB16
                         
-                    GridButton:
+                    CardButton:
                         text: '3'
                         name: 'three'
                         id: three
                         
-                    GridButton:
+                    CardButton:
                         text: '6'
                         name: 'six'
                         id: six
                         
-                    GridButton:
+                    CardButton:
                         text: '99'
                         name: 'nine'
                         id: nine
@@ -294,9 +309,9 @@
                     
                     
                 Button:
-                    #size_hint: None, None
-                    size_hint: 1, 1/9.0
-                    #size: '150dp', '48dp'
+                    size_hint_y: None
+                    #size_hint: 1, 1/9.0
+                    size_y: '48dp'
                     text: 'Нова карта'
                     on_release: 
                         sm.transition.direction = 'right'
