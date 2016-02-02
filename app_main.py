@@ -19,7 +19,7 @@ class GridButton(Button):
 class Controller(BoxLayout):
     
     debug = False
-    debug = True
+    #debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 

@@ -1,7 +1,7 @@
 #-*-coding:utf8;-*-
 #:	import Factory kivy.factory.Factory
 #:import random random.random
-
+#:import rint random.randint
 
 <GridButton@Button>:
     # transparent buttons
@@ -59,7 +59,8 @@
                     # transparent buttons
                     background_normal: '' 
                     background_color: 1, 1, 1, 0
-    
+                    foreground_color: 1, 1, 1, 0.9
+                    cursor_color: 1, 1, 1, 0.8
                 
                     size_hint_y: 0.8
                     multiline: False
@@ -75,11 +76,12 @@
                     # transparent buttons
                     background_normal: '' 
                     background_color: 1, 1, 1, 0
-    
+                    foreground_color: 1, 1, 1, 0.9
+                    cursor_color: 1, 1, 1, 0.7
                 
                     size_hint_y: 0.8           
                     multiline: False
-                    text: '21111985' if root.debug else str('') 
+                    text: "%02d%02d%s" % (rint(1, 28), rint(1, 12), rint(1950, 2020)) if root.debug else str('') 
                     id: t_date
 
     
@@ -189,27 +191,27 @@
                     # start row 1
                         
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB1'
                         id: GB1
                         
                     GridButton:
-                        text: '|\nV'
+                        #text: '|\nV'
                         name: 'self_col'
                         id: self_col
                         
                     GridButton:
-                        text: '|\nV'
+                        #text: '|\nV'
                         name: 'others_col'
                         id: others_col
                         
                     GridButton:
-                        text: '|\nV'
+                        #text: '|\nV'
                         name: 'higherself_col'
                         id: higherself_col
                         
                     GridButton:
-                        text: "_\n/'"
+                        text: ""
                         name: 'emotional_diag'
                         id: emotional_diag
                     
@@ -218,7 +220,7 @@
                     # 
                         
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB6'
                         id: GB6
                         
@@ -238,7 +240,7 @@
                         id: seven
                         
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB10'
                         id: GB10
                         
@@ -248,8 +250,8 @@
                     
                     GridButton:
                         text: ''
-                        name: 'zero'
-                        id: zero
+                        name: 'nzero'
+                        id: nzero
                         
                     CardButton:
                         text: '2'
@@ -267,7 +269,7 @@
                         id: eight
                         
                     GridButton:
-                        text: '<--'
+                        #text: '<--'
                         name: 'GB15'
                         id: GB15
                         
@@ -276,7 +278,7 @@
                     # 
                     
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB16'
                         id: GB16
                         
@@ -296,7 +298,7 @@
                         id: nine
                         
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB20'
                         id: GB20
                         
@@ -305,19 +307,19 @@
                     # 
                     
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB21'
                         id: GB21
                         
                     GridButton:
-                        text: '? '
+                        text: ''
                         name: 'none'
                         id: none
                         
                     GridButton:
                         text: ''
-                        name: 'nfour'
-                        id: nfour
+                        name: 'zero'
+                        id: zero
                         
                     GridButton:
                         text: ''
@@ -325,7 +327,7 @@
                         id: nseven
                         
                     GridButton:
-                        text: '?'
+                        text: ''
                         name: 'GB25'
                         id: GB25
                     
