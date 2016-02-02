@@ -8,11 +8,28 @@ class CardInterpreter:
         self.card = card
     #eof def
     
+    def getOneMeaning(self):
+        return getMeaning(self.card, "1"+str(self.card[1]))
+    
     
     def getFullInterpretation(self):
-        pass
-    
-    #eof def getFullInterpretation
+        #print(dir(self)) 
+        
+        #get all methods of this class
+        methods = [method for method in dir(self) if callable(getattr(self, method))]
+        methods.remove("__init__")
+        methods.remove("getFullInterpretation") 
+        
+        result = '' 
+        
+        #call all methods
+        for m in methods:
+            print "calling "+m
+            result += getattr(self, m)()
+        
+        return result
+        
+    #eof getFullInterpretation
     
 
 #eof class
@@ -23,6 +40,6 @@ if __name__ == "__main__":
     	1, 1, 1,
     	1, 1, 2] )
     	
-    cardReader.getFullInterpretation()
-    print (getMeaning(cardReader.card, "test")) 
+    print(cardReader.getFullInterpretation()) 
+    #print (getMeaning(cardReader.card, "test")) 
     print ("Done") 
