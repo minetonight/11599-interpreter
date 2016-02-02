@@ -1,1 +1,0 @@
-buf = 'още няма данни, попълни /storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/test_bg.txt' 
