@@ -20,12 +20,13 @@ class GridButton(Button):
 class Controller(BoxLayout):
     
     debug = False
-    #debug = True
+    debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 
+    popupText = StringProperty()
+    popup = ObjectProperty()
     t_date = ObjectProperty()
-    #sm_screen = StringProperty()
     
     def on_archive(self):
         #populate form
@@ -45,10 +46,14 @@ class Controller(BoxLayout):
 
         cardReader = CardInterpreter(self.calculator.card)
         
+        if self.debug:
+            print("grid Button press")
+            print("btn is " + str(btn.name) )
         
-        print("grid Button press")
-        print("btn is " + str(btn.name) )
-        self.ids[btn.name].text += '1'
+        self.popupText = (str(btn.name) + " ") * 100
+        self.popup.title = "Значение за " + str(btn.name)
+        self.popup.open()
+        #self.ids[btn.name].text += '1'
         #self.ids["GB2"].text = "PUSH"
     
     
@@ -145,18 +150,21 @@ class NumerologyApp(App):
             screen = self.controller.ids.sm.current
             if self.controller.debug:
                 print(screen) 
+                print "popup state" 
+                print( self.controller.popup.isOpen ) 
             
-            if screen == 'cardScreen':
+            if self.controller.popup.isOpen:
+                self.controller.popup.dismiss()
+            elif screen == 'cardScreen':
                 sm = self.controller.ids.sm
                 sm.transition.direction = 'right'
                 sm.current = 'dataInputScreen' 
-                
-                return True # prevent closing
             else:
                 self.stop() 
                 
-        elif key == 1000: # menu, open archive 
-            self.controller.on_archive()
+        elif key == 1000: # menu, open archives 
+            if screen == 'dataInputScreen':
+                self.controller.on_archive()
             
         else:
             pass

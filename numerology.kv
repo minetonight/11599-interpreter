@@ -23,8 +23,40 @@
     #define needed conlrols' ids
     t_name: t_name
     t_date: t_date
-
+    popup: popup
     
+    Popup:
+        id: popup
+        title: "Значение"
+        isOpen: False
+        
+        on_open: self.isOpen = True 
+        on_dismiss: self.isOpen = False
+        
+        # this makes the popup float and hidden
+        on_parent:
+            if self.parent == root: self.parent.remove_widget(self)
+        
+        BoxLayout:
+            #<ScrollableLabel>: 
+            orientation: 'vertical'
+            ScrollView:
+                Label: 
+                    size_hint_y: None 
+                    height: self.texture_size[1] 
+                    text_size: self.width, None 
+                    text: root.popupText
+            
+            Button:
+                # transparent buttons
+                background_normal: '' 
+                background_color: 1, 1, 1, 0
+    
+                size_hint_y: None
+                size_y: '50dp'
+                text: 'Затвори'
+                on_release: popup.dismiss()
+            
     ScreenManager:
         id: sm
 
