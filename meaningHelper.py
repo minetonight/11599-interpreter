@@ -9,7 +9,11 @@ def getMeaning(card, sectionName):
         f = open(filename, "r") 
     except IOError:
         f = open(filename, "w+r") 
-        f.write("buf = 'още няма данни, попълни "+ sectionName +"' ") 
+        text = (
+'''#-*-coding:utf8;-*-
+
+buf = " още няма данни, попълни %s" ''') % (sectionName, ) 
+        f.write(text) 
         f.flush()
         f.seek(0)
         
