@@ -53,6 +53,8 @@ class Controller(BoxLayout):
         if btn.name == 'full_meaning' :
             pass
         
+        meaning = cardReader.getMeaning ("card", btn.name)
+        
         self.popupText = (str(btn.name) + " ") * 100
         self.popup.title = "Значение за " + str(btn.name)
         self.popup.open()
@@ -153,8 +155,8 @@ class NumerologyApp(App):
         pass
     
     def hook_keyboard(self, window, key, *largs):
+        screen = self.controller.ids.sm.current
         if key in [27, 1001] : # BACK
-            screen = self.controller.ids.sm.current
             if self.controller.debug:
                 print(screen) 
                 print "popup state" 
