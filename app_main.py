@@ -50,6 +50,9 @@ class Controller(BoxLayout):
             print("grid Button press")
             print("btn is " + str(btn.name) )
         
+        if btn.name == 'full_meaning' :
+            pass
+        
         self.popupText = (str(btn.name) + " ") * 100
         self.popup.title = "Значение за " + str(btn.name)
         self.popup.open()
@@ -109,7 +112,11 @@ class Controller(BoxLayout):
         self.ids["eight"].text = "8" * calc.card[8]
         self.ids["nine"].text = "9" * calc.card[9]
         
+        'self_col'
+        'others_col'
+        'higherself_col'
         
+        'emotional_diag'
 #eof class
 
 
@@ -171,5 +178,3 @@ class NumerologyApp(App):
             
 
 NumerologyApp().run()
-
-
