@@ -85,11 +85,6 @@ if __name__ == "__main__":
 
     birthday = "21111985" #input("Enter full birthday e.g. ddmmyyyy") 
     print(birthday) 
-
-    baseCard = [2,2,1,
-    1,1,1,
-    1,1,2] 
-    
     
     calculator = CardCalculator(birthday)
 

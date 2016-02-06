@@ -46,9 +46,9 @@ class Controller(BoxLayout):
             print("btn is " + str(btn.name) )
         
         if btn.name == 'full_meaning':
-            self.cardReader. getFullInterpretation() 
-            
-        meaning = self.cardReader.getMeaning(btn.name)
+            meaning = self.fullInfo 
+        else:
+            meaning = self.cardReader.getMeaning(btn.name)
         
         self.popupText = meaning
         self.popup.title = "Значение за " + str(btn.name)
@@ -77,9 +77,9 @@ class Controller(BoxLayout):
 
             # log reading
             self.cardReader = CardInterpreter(calculator, g_type)
-            self.cardReader.getFullInterpretation()
+            self.fullInfo = self.cardReader.getFullInterpretation()
             
-            # TODO archiveReading(g_type, birthday, name, meaning) 
+            # TODO archiveReading(g_type, birthday, name, self.fullInfo ) 
             archiveReading()
     
     
@@ -92,25 +92,20 @@ class Controller(BoxLayout):
         self.ids["cardStr_label"].text = labelStr % (calc.birthday, calc.personalNumber, calc.personalNumberSimplified, calc.adjustment, calc.adjusted, calc.adjustedSimple, ) 
         self.ids["personal_number"].text = str(calc.personalNumberSimplified) 
         
-        self.ids["zero"].text = "0" * calc.card[0]
+        self.ids["0"].text = "0" * calc.card[0]
         
-        self.ids["one"].text = "1" * calc.card[1]
-        self.ids["two"].text = "2" * calc.card[2]
-        self.ids["three"].text = "3" * calc.card[3]
+        self.ids["1"].text = "1" * calc.card[1]
+        self.ids["2"].text = "2" * calc.card[2]
+        self.ids["3"].text = "3" * calc.card[3]
         
-        self.ids["four"].text = "4" * calc.card[4]
-        self.ids["five"].text = "5" * calc.card[5]
-        self.ids["six"].text = "6" * calc.card[6]
+        self.ids["4"].text = "4" * calc.card[4]
+        self.ids["5"].text = "5" * calc.card[5]
+        self.ids["6"].text = "6" * calc.card[6]
         
-        self.ids["seven"].text = "7" * calc.card[7]
-        self.ids["eight"].text = "8" * calc.card[8]
-        self.ids["nine"].text = "9" * calc.card[9]
+        self.ids["7"].text = "7" * calc.card[7]
+        self.ids["8"].text = "8" * calc.card[8]
+        self.ids["9"].text = "9" * calc.card[9]
         
-        'self_col'
-        'others_col'
-        'higherself_col'
-        
-        'emotional_diag'
 #eof class
 
 
