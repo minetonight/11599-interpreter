@@ -11,7 +11,7 @@ from kivy.uix.button import Button
 
 from numerology import CardCalculator
 from interpreter import CardInterpreter
-from meaningHelper import archiveReading, getMeaning
+from meaningHelper import archiveReading
 
 class GridButton(Button):
    controller = None
@@ -40,26 +40,19 @@ class Controller(BoxLayout):
         
         
     def gridButtonPress(self, btn):
-        # getMeaning       
-        #print(NumbersInterpreter.getDateInterpretation(self.calculator.personalDate)) 
-        #print(NumbersInterpreter.getPersonalNumberInterpretation(self.calculator.personalNumberSimplified)) 
-
-        cardReader = CardInterpreter(self.calculator.card)
         
         if self.debug:
             print("grid Button press")
             print("btn is " + str(btn.name) )
         
-        if btn.name == 'full_meaning' :
-            pass
+        if btn.name == 'full_meaning':
+            self.cardReader. getFullInterpretation() 
+            
+        meaning = self.cardReader.getMeaning(btn.name)
         
-        meaning = cardReader.getMeaning ("card", btn.name)
-        
-        self.popupText = (str(btn.name) + " ") * 100
+        self.popupText = meaning
         self.popup.title = "Значение за " + str(btn.name)
         self.popup.open()
-        #self.ids[btn.name].text += '1'
-        #self.ids["GB2"].text = "PUSH"
     
     
     def gridButtonRelease(self, btn):
@@ -78,20 +71,19 @@ class Controller(BoxLayout):
         g_type = self.g_type
         
         if len(birthday) == 8:
-            self.calculator = CardCalculator(birthday)
+            calculator = CardCalculator(birthday)
 
-            self.updateWidgets()
+            self.updateWidgets(calculator)
 
             # log reading
-            cardReader = CardInterpreter(self.calculator.card)
-            cardReader.getFullInterpretation()
-
+            self.cardReader = CardInterpreter(calculator, g_type)
+            self.cardReader.getFullInterpretation()
+            
+            # TODO archiveReading(g_type, birthday, name, meaning) 
             archiveReading()
     
     
-    
-    def updateWidgets(self): 
-        calc = self.calculator 
+    def updateWidgets(self, calc): 
         
         #labelStr = '21111985 = 28 = 10\n                       -2\n                      26 = 8'
         labelStr = '%s = %s = %s\n                       %s\n                      %s = %s'
@@ -122,7 +114,6 @@ class Controller(BoxLayout):
 #eof class
 
 
-
 class NumerologyApp(App):
     
     def build(self):
@@ -132,6 +123,7 @@ class NumerologyApp(App):
         GridButton.controller = controller
         self.controller = controller 
         return controller
+    
     
     def post_build_init(self, *args):
         
@@ -145,6 +137,7 @@ class NumerologyApp(App):
             #android.map_key(android.KEYCODE_SEARCH, 1003)
         
         Window.bind(on_keyboard=self.hook_keyboard)
+        
         
     def on_pause(self):
         # when you are going on pause, don't forget to stop using resources 
