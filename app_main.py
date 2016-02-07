@@ -162,10 +162,15 @@ class NumerologyApp(App):
             else:
                 self.stop() 
                 
-        elif key == 1000: # menu, open archives 
+        elif key == 1000: # menu, open archives, share via pasteBin
             if screen == 'dataInputScreen':
                 self.controller.on_archive()
-            
+            elif screen == 'cardScreen':
+                pass
+                # TODO
+                # pastebin dev key 8fa8dc71c640f0159758990f8e3ab5e6
+                # via twitter login
+        
         else:
             pass
             
