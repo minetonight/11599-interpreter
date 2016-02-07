@@ -4,6 +4,7 @@
 from platform import platform
 
 from kivy.core.window import Window
+from kivy.core.clipboard import Clipboard
 from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from kivy.properties import ObjectProperty, StringProperty
@@ -11,7 +12,7 @@ from kivy.uix.button import Button
 
 from numerology import CardCalculator
 from interpreter import CardInterpreter
-from meaningHelper import archiveReading
+from meaningHelper import archiveReading, pastebinShare
 
 class GridButton(Button):
    controller = None
@@ -20,7 +21,7 @@ class GridButton(Button):
 class Controller(BoxLayout):
     
     debug = False
-    debug = True
+    #debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 
@@ -58,6 +59,19 @@ class Controller(BoxLayout):
     def gridButtonRelease(self, btn):
         pass
     
+    
+    def share(self):
+        #read form
+        name = self.t_name.text.strip() 
+        birthday = self.t_date.text.strip()
+        g_type = self.g_type
+        
+        url = pastebinShare(g_type, birthday, name, self.fullInfo)
+        t = self.ids["t_share"]
+        t.text = url
+        Clipboard.copy(url)
+        #t.select_all()
+        #t.copy() 
     
     def processInput(self):
         #read form

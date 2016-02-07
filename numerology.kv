@@ -352,7 +352,36 @@
                         name: 'GB25'
                         id: GB25
                     
+                BoxLayout:
+                    orientation: 'horizontal'              
+                    size_hint: 1, 1/9.0
                     
+                    
+                    Button:
+                        # transparent buttons
+                        background_normal: '' 
+                        background_color: 1, 1, 1, 0
+                        
+                        text: 'Share'
+                        name: 'share' 
+                        id: b_share
+                        size_hint: 0.2, 1
+                        on_press: root.share()
+                        
+                    TextInput:
+                        # transparent buttons
+                        background_normal: '' 
+                        background_color: 1, 1, 1, 0
+                        foreground_color: 1, 1, 1, 0.9
+                        cursor_color: 1, 1, 1, 0.7
+                    
+                        size_hint: 0.8, 1        
+                        multiline: False
+                        readonly: True
+                        text: "" 
+                        id: t_share
+      
+                        
                 Button:
                     # transparent buttons
                     background_normal: '' 
