@@ -56,7 +56,7 @@ class CardInterpreter:
                 + self.mid_card_buttons \
                 + self.card_patterns_buttons \
         
-        result = '' 
+        result = str(self.calc) +'\n' 
         
         #call all methods
         for b in buttons :

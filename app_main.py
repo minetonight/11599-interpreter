@@ -61,10 +61,14 @@ class Controller(BoxLayout):
     
     def processInput(self):
         #read form
-        print("name was %s") % (self.t_name.text) 
-        print("date was %s") % (self.t_date.text) 
-        print("type was %s") % (self.g_type)
-        
+        if self.debug:
+            print("name was %s") % (self.t_name.text) 
+            print("date was %s") % (self.t_date.text) 
+            print("type was %s") % (self.g_type)
+            
+            if self.g_type == '':
+                self.g_type = "event" 
+            
         #read form
         name = self.t_name.text.strip() 
         birthday = self.t_date.text.strip()
@@ -79,8 +83,7 @@ class Controller(BoxLayout):
             self.cardReader = CardInterpreter(calculator, g_type)
             self.fullInfo = self.cardReader.getFullInterpretation()
             
-            # TODO archiveReading(g_type, birthday, name, self.fullInfo ) 
-            archiveReading()
+            archiveReading(g_type, birthday, name, self.fullInfo)
     
     
     def updateWidgets(self, calc): 

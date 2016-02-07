@@ -137,9 +137,9 @@
                     CheckBox:
                         group: 'g_gender'
                         on_release: root.g_type = 'event'
-                        active: True if root.g_type == 'event' else False
+                        active: True if root.g_type == 'event' else True if root.debug else False
                     Label:
-                        text: 'Случай'
+                        text: 'Дата'
                 
                 
                 AnchorLayout:

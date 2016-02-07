@@ -79,6 +79,37 @@ class CardCalculator:
         #print(self.personalNumberSimplified) 
         print(self.card)
         
+        
+    def __str__(calc):
+        text = \
+"""
+birthday = %s
+personalNumber = %s
+      |      |      
+%6s|%6s|%6s
+      |      |      
+---------------------
+      |      |      
+%6s|%6s|%6s
+      |      |      
+---------------------
+      |      |      
+%6s|%6s|%6s
+      |      |      
+---------------------
+      |      |      
+      |%6s|      
+      |      |      
+"""
+        	
+        text = text % (calc.birthday, 
+        calc.personalNumberSimplified, 
+        "1" * calc.card[1], "4" * calc.card[4], "7" * calc.card[7], 
+        "2" * calc.card[2], "5" * calc.card[5], "8" * calc.card[8], 
+        "3" * calc.card[3], "6" * calc.card[6], "9" * calc.card[9], 
+        "0" * calc.card[0]) 
+        return text
+        
 #eof class
 
 if __name__ == "__main__":
@@ -87,7 +118,7 @@ if __name__ == "__main__":
     print(birthday) 
     
     calculator = CardCalculator(birthday)
-
+    print str(calculator) 
 
 
 
