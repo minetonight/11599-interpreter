@@ -1,0 +1,57 @@
+
+birthday = 08022016
+personalNumber = 10
+      |      |      
+111111|      |      
+      |      |      
+---------------------
+      |      |      
+    22|      |    88
+      |      |      
+---------------------
+      |      |      
+     3|     6|    99
+      |      |      
+---------------------
+      |      |      
+      |  0000|      
+      |      |      
+
+ още няма данни, попълни date/8
+
+ още няма данни, попълни dateSum/10
+
+ още няма данни, попълни card/16
+
+ още няма данни, попълни card/22
+
+ още няма данни, попълни card/31
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/40.py
+
+ още няма данни, попълни card/50
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/61.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/70.py
+
+ още няма данни, попълни card/82
+
+ още няма данни, попълни card/92
+
+ още няма данни, попълни card/04
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+

@@ -178,27 +178,27 @@
                 
                 GridButton:
                     text: t_name.text
-                    size_hint: 1, 1/12.0
+                    size_hint: 1, 1/7.0
                     font_size: '42dp' 
                     bold: True 
                     name: 'full_meaning'
                 
                 BoxLayout:
                     orientation: 'horizontal'              
-                    size_hint: 1, 1/9.0
+                    size_hint: 1, 1/7.0
                     
                     
                     GridButton:
-                        text:'21'
+                        text:'??'
                         name: 'date_number' 
                         id: date_number
                         size_hint: 0.1, 1
                     Label:
-                        text: '21111985 = 28 = 10\n                       -2\n                      26 = 8'
+                        text: '???????? = 28 = 10\n                       -2\n                      26 = 8'
                         id: cardStr_label
                         size_hint: 0.8, 1
                     GridButton:
-                        text: '10' 
+                        text: '??' 
                         name: 'personal_number' 
                         id: personal_number
                         size_hint: 0.1, 1
@@ -354,7 +354,7 @@
                     
                 BoxLayout:
                     orientation: 'horizontal'              
-                    size_hint: 1, 1/9.0
+                    size_hint: 1, 1/12.0
                     
                     
                     Button:
@@ -378,6 +378,7 @@
                         size_hint: 0.8, 1        
                         multiline: False
                         readonly: True
+                        use_bubble: False
                         text: "" 
                         id: t_share
       

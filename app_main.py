@@ -21,7 +21,7 @@ class GridButton(Button):
 class Controller(BoxLayout):
     
     debug = False
-    #debug = True
+    debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 
@@ -123,6 +123,8 @@ class Controller(BoxLayout):
         self.ids["8"].text = "8" * calc.card[8]
         self.ids["9"].text = "9" * calc.card[9]
         
+        
+        self.ids["t_share"].text = '' 
 #eof class
 
 

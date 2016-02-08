@@ -1,0 +1,57 @@
+
+birthday = 03081994
+personalNumber = 7
+      |      |      
+     1|    44|     7
+      |      |      
+---------------------
+      |      |      
+    22|     5|     8
+      |      |      
+---------------------
+      |      |      
+   333|      |    99
+      |      |      
+---------------------
+      |      |      
+      |    00|      
+      |      |      
+
+ още няма данни, попълни birthday/3
+
+Лекари
+
+още няма данни, попълни 11
+
+ още няма данни, попълни card/22
+
+ още няма данни, попълни card/33
+
+ още няма данни, попълни card/42
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/51.py
+
+ още няма данни, попълни card/60
+
+ още няма данни, попълни card/71
+
+ още няма данни, попълни card/81
+
+ още няма данни, попълни card/92
+
+ още няма данни, попълни card/02
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+

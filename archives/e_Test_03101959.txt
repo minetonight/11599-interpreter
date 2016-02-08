@@ -1,0 +1,57 @@
+
+birthday = 03101959
+personalNumber = 10
+      |      |      
+   111|      |      
+      |      |      
+---------------------
+      |      |      
+   222|     5|    88
+      |      |      
+---------------------
+      |      |      
+     3|     6|    99
+      |      |      
+---------------------
+      |      |      
+      |   000|      
+      |      |      
+
+ още няма данни, попълни date/3
+
+ още няма данни, попълни dateSum/10
+
+още няма данни, попълни 13
+
+ още няма данни, попълни card/23
+
+ още няма данни, попълни card/31
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/40.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/51.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/61.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/70.py
+
+ още няма данни, попълни card/82
+
+ още няма данни, попълни card/92
+
+ още няма данни, попълни card/03
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+
