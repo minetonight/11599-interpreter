@@ -1,3 +1,3 @@
 #-*-coding:utf8;-*-
 
-buf = "учители, възпитатели"
+buf = self._getMeaning(folder, "1")

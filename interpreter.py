@@ -102,6 +102,10 @@ buf = " още няма данни, попълни %s/%s" ''') % (folder, fname)
 if __name__ == "__main__":
     cardReader = CardInterpreter( CardCalculator("21111985") , "event")
     	
-    print(cardReader.getFullInterpretation()) 
-    #print (cardReader._getMeaning("date", "2")) 
+    #print(cardReader.getFullInterpretation()) 
+    print (cardReader._getMeaning("personalSum", "12")) 
     print ("Done") 
+    
+    
+    
+    

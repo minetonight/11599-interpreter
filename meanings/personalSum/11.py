@@ -1,3 +1,3 @@
 #-*-coding:utf8;-*-
 
-buf = "военни"
+buf = self._getMeaning(folder, "2")
