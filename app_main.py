@@ -33,7 +33,7 @@ class Controller(BoxLayout):
         #populate form
         self.t_name.text = "Username" 
         self.t_date.text = "xxyyzzzz" 
-        self.g_type = 'event' 
+        self.g_type = 'date' 
         
         
     def on_loadArchive(self):
@@ -81,7 +81,7 @@ class Controller(BoxLayout):
             print("type was %s") % (self.g_type)
             
             if self.g_type == '':
-                self.g_type = "event" 
+                self.g_type = "date" 
             
         #read form
         name = self.t_name.text.strip() 

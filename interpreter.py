@@ -25,15 +25,19 @@ class CardInterpreter:
         # check buttons types 
         if buttonName == "date_number":
             filename = str(self.calc.personalDate)
-            if self.readingType == "event":
+            if self.readingType == "date":
                 folder = 'date' 
+            elif self.readingType == "year":
+                folder = 'year'
             else:
                 folder = 'birthday' 
             
         elif buttonName == "personal_number":
             filename = str(self.calc.personalNumberSimplified)
-            if self.readingType == "event":
+            if self.readingType == "date":
                 folder = 'dateSum' 
+            elif self.readingType == "year":
+                folder = 'yearSum' 
             else:
                 folder = 'personalSum'
             

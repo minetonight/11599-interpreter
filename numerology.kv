@@ -136,10 +136,17 @@
                         
                     CheckBox:
                         group: 'g_gender'
-                        on_release: root.g_type = 'event'
-                        active: True if root.g_type == 'event' else True if root.debug else False
+                        on_release: root.g_type = 'date'
+                        active: True if root.g_type == 'date' else True if root.debug else False
                     Label:
                         text: 'Дата'
+                    
+                    CheckBox:
+                        group: 'g_gender'
+                        on_release: root.g_type = 'year'
+                        active: True if root.g_type == 'year' else False
+                    Label:
+                        text: 'Година'
                 
                 
                 AnchorLayout:
