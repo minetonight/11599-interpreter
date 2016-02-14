@@ -1,0 +1,60 @@
+
+birthday = 21042007
+personalNumber = 7
+      |      |      
+   111|     4|    77
+      |      |      
+---------------------
+      |      |      
+    22|     5|     8
+      |      |      
+---------------------
+      |      |      
+     3|     6|     9
+      |      |      
+---------------------
+      |      |      
+      |   000|      
+      |      |      
+
+ още няма данни, попълни date//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/date/21.py
+
+ още няма данни, попълни dateSum/7
+
+още няма данни, попълни 13
+
+ още няма данни, попълни card/22
+
+ още няма данни, попълни card/31
+
+ още няма данни, попълни card/41
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/51.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/61.py
+
+ още няма данни, попълни card/72
+
+ още няма данни, попълни card/81
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/91.py
+
+ още няма данни, попълни card/03
+
+ти си атруист
+не си егоист
+Баланс на атруизма 7/5 
+Баланс на егоизма 4/5
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+

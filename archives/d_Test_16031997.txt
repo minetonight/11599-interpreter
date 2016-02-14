@@ -1,0 +1,64 @@
+
+birthday = 16031997
+personalNumber = 9
+      |      |      
+    11|     4|    77
+      |      |      
+---------------------
+      |      |      
+     2|      |      
+      |      |      
+---------------------
+      |      |      
+   333|    66|   999
+      |      |      
+---------------------
+      |      |      
+      |     0|      
+      |      |      
+
+ още няма данни, попълни date/16
+
+ още няма данни, попълни dateSum/9
+
+още няма данни, попълни 12 повече
+
+ още няма данни, попълни card/21
+
+ още няма данни, попълни card/33
+
+ още няма данни, попълни card/41
+
+ още няма данни, попълни card/50
+
+ още няма данни, попълни card/62
+
+ още няма данни, попълни card/72
+
+ още няма данни, попълни card/80
+
+ още няма данни, попълни card/93
+
+Чем больше нулей в вашей дате рождения и в расчетах, тем выше ваша степень ошибок и неуверенности. 
+Встречаются даты рождения без нулей, это два месяца 11 и 12 и соответствующие цифры. 
+Таких людей я называю «трамваи». У них есть некая внутренняя установка. Как по-русски говорят — они «себе на уме», 
+двигаются очень четко по внешним ориентирам либо меняют по ходу жизни маршрут (делают это очень резко) и идут в другом направлении. 
+Бывают очень привязчивы, неуверенны, если не нашли свой ориентир, то так же резки и уверенны в смене направления водителя или маршрута. 
+
+не си алтруист
+не си егоист
+Баланс на атруизма 5/5 
+Баланс на егоизма 8/5
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+

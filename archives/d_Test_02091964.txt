@@ -1,0 +1,60 @@
+
+birthday = 02091964
+personalNumber = 4
+      |      |      
+  1111|    44|      
+      |      |      
+---------------------
+      |      |      
+   222|      |      
+      |      |      
+---------------------
+      |      |      
+     3|     6|   999
+      |      |      
+---------------------
+      |      |      
+      |    00|      
+      |      |      
+
+ още няма данни, попълни date/2
+
+ още няма данни, попълни dateSum/4
+
+още няма данни, попълни 14
+
+ още няма данни, попълни card/23
+
+ още няма данни, попълни card/31
+
+ още няма данни, попълни card/42
+
+ още няма данни, попълни card/50
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/61.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/70.py
+
+ още няма данни, попълни card/80
+
+ още няма данни, попълни card/93
+
+ още няма данни, попълни card/02
+
+не си алтруист
+не си егоист
+Баланс на атруизма 6/5 
+Баланс на егоизма 5/5
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+
