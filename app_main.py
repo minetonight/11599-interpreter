@@ -9,6 +9,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.button import Button
+from random import randint as rint
 
 from numerology import CardCalculator
 from interpreter import CardInterpreter
@@ -98,7 +99,10 @@ class Controller(BoxLayout):
             self.fullInfo = self.cardReader.getFullInterpretation()
             
             archiveReading(g_type, birthday, name, self.fullInfo)
-    
+        
+        if self.debug:
+            self.t_date.text = "%02d%02d%s" % (rint(1, 28), rint(1, 12), rint(1950, 2020))
+                    
     
     def updateWidgets(self, calc): 
         

@@ -6,7 +6,7 @@ class CardInterpreter:
     
     personal_buttons = ["date_number", "personal_number"] 
     mid_card_buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"] 
-    card_patterns_buttons = ["ego_or_altru", "", "", 
+    card_patterns_buttons = ["ego_or_altru", "sensitive", "relational", "wise", 
     'self_col', 'others_col', 'higherself_col',  
     'emotional_diag', ] 
     
