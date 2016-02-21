@@ -22,32 +22,43 @@ class GridButton(Button):
 
 class Controller(BoxLayout):
     
-    debug = False
+    #debug = False
     debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 
     popupText = StringProperty()
     popup = ObjectProperty()
-    filePopup  = ObjectProperty()
+    filePopup = ObjectProperty()
     t_date = ObjectProperty()
     
     def on_archive(self):
         curdir = dirname(__file__)
         filename = join(curdir, "archives") 
-        	
+        
         self.filePopup.filechooser.rootpath = filename
         self.filePopup.open()
         
         
-    def loadArchive(self, filename ):
-        #populate form
+    def loadArchive(self, filenames ):
+        filename = filenames[0].split("/")[-1]
+        parts = filename.split("_")
+        g_type = parts[0]
+        name = parts[1]
+        date = parts[2][0:-4] # trim .txt
+        
         if self.debug:
+            print filenames[0]
             print filename
-            
-        self.t_name.text = str(filename) 
-        self.t_date.text = str(filename) 
-        self.g_type = 'date' 
+            print parts
+            print name
+            print date
+        
+        dictionary = {"d":"date","e":"year","y":"year","m":"male","f":"female"}
+        #populate form
+        self.t_name.text = name
+        self.t_date.text = date 
+        self.g_type = dictionary[g_type]
         
         
         
@@ -185,6 +196,8 @@ class NumerologyApp(App):
             
             if self.controller.popup.isOpen:
                 self.controller.popup.dismiss()
+            if self.controller.filePopup.isOpen:
+                self.controller.filePopup.dismiss()
             elif screen == 'cardScreen':
                 sm = self.controller.ids.sm
                 sm.transition.direction = 'right'
@@ -192,14 +205,11 @@ class NumerologyApp(App):
             else:
                 self.stop() 
                 
-        elif key == 1000: # menu, open archives, share via pasteBin
+        elif key in [127, 9, 1000]: # menu, open archives, share via pasteBin
             if screen == 'dataInputScreen':
                 self.controller.on_archive()
             elif screen == 'cardScreen':
                 pass
-                # TODO
-                # pastebin dev key 8fa8dc71c640f0159758990f8e3ab5e6
-                # via twitter login
         
         else:
             pass
