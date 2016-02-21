@@ -24,7 +24,43 @@
     t_name: t_name
     t_date: t_date
     popup: popup
+    filePopup: filePopup
     
+    Popup:
+        id: filePopup
+        title: "Избери архив"
+        isOpen: False
+        filechooser: filechooser
+        
+        on_open: self.isOpen = True 
+        on_dismiss: self.isOpen = False
+        
+        # this makes the popup float and hidden
+        on_parent:
+            if self.parent == root: self.parent.remove_widget(self)
+        
+        BoxLayout:
+            
+            orientation: 'vertical'
+            
+            FileChooserListView: 
+                id: filechooser 
+                on_selection: 
+                    filePopup.dismiss()
+                    root.loadArchive(self.selection)
+                
+            Button:
+                # transparent buttons
+                background_normal: '' 
+                background_color: 1, 1, 1, 0
+    
+                size_hint_y: None
+                size_y: '50dp'
+                text: 'Зареди'
+                on_release: 
+                    filePopup.dismiss()
+                    root.loadArchive(self.selection)
+           
     Popup:
         id: popup
         title: "Значение"

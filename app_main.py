@@ -10,6 +10,7 @@ from kivy.app import App
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.button import Button
 from random import randint as rint
+from os.path import join, dirname
 
 from numerology import CardCalculator
 from interpreter import CardInterpreter
@@ -28,17 +29,26 @@ class Controller(BoxLayout):
     g_type = StringProperty() 
     popupText = StringProperty()
     popup = ObjectProperty()
+    filePopup  = ObjectProperty()
     t_date = ObjectProperty()
     
     def on_archive(self):
+        curdir = dirname(__file__)
+        filename = join(curdir, "archives") 
+        	
+        self.filePopup.filechooser.rootpath = filename
+        self.filePopup.open()
+        
+        
+    def loadArchive(self, filename ):
         #populate form
-        self.t_name.text = "Username" 
-        self.t_date.text = "xxyyzzzz" 
+        if self.debug:
+            print filename
+            
+        self.t_name.text = str(filename) 
+        self.t_date.text = str(filename) 
         self.g_type = 'date' 
         
-        
-    def on_loadArchive(self):
-        pass 
         
         
     def gridButtonPress(self, btn):
