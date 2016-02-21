@@ -2,8 +2,16 @@
 
 buf = "" 
 
-if card[3] > 0 and card[6] > 0 and card[9] > 1:
+a = card[3] 
+b = card[6]
+c = card[9]
+norm = 4
+
+
+if a > 0 and b > 0 and c > 1:
     buf = "редът за Мъдрост е запълнен" 
-    power = card[3] + card[6] + card[9]
-    buf += "\nСилата му е %d при норма от %d"%(power, 4) 
+    power = a + b + c
+    buf += "\nСилата му е %d при норма от %d"%(power, norm) 
+    
+
     
