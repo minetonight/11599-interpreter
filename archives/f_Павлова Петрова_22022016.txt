@@ -1,0 +1,68 @@
+
+birthday = 22022016
+personalNumber = 6
+      |      |      
+   111|     4|     7
+      |      |      
+---------------------
+      |      |      
+  2222|     5|      
+      |      |      
+---------------------
+      |      |      
+     3|    66|     9
+      |      |      
+---------------------
+      |      |      
+      |    00|      
+      |      |      
+
+ още няма данни, попълни birthday/22
+
+депутаты и административно-государственные чиновники
+
+още няма данни, попълни 13
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/24.py
+
+ още няма данни, попълни card/31
+
+ още няма данни, попълни card/41
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/51.py
+
+ още няма данни, попълни card/62
+
+ още няма данни, попълни card/71
+
+ още няма данни, попълни card/80
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/91.py
+
+ още няма данни, попълни card/02
+
+ти си атруист
+не си егоист
+Баланс на атруизма 6/5 
+Баланс на егоизма 5/5
+
+Редът за Сензитив е запълнен
+Силата му е 5 при норма от 4
+
+
+
+
+
+
+
+Диагоналът за ?Чувствена? личност е запълнен
+Силата му е 3 при норма от 3
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/others_col.py
+
+ още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
+
+ още няма данни, попълни card/emotional_diag
+

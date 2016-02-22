@@ -22,8 +22,8 @@ class GridButton(Button):
 
 class Controller(BoxLayout):
     
-    #debug = False
-    debug = True
+    debug = False
+    #debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 
@@ -196,7 +196,7 @@ class NumerologyApp(App):
             
             if self.controller.popup.isOpen:
                 self.controller.popup.dismiss()
-            if self.controller.filePopup.isOpen:
+            elif self.controller.filePopup.isOpen:
                 self.controller.filePopup.dismiss()
             elif screen == 'cardScreen':
                 sm = self.controller.ids.sm

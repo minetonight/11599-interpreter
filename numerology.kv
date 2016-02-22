@@ -23,8 +23,8 @@
     #define needed conlrols' ids
     t_name: t_name
     t_date: t_date
-    popup: popup
-    filePopup: filePopup
+    popup: popup.__self__
+    filePopup: filePopup.__self__
     
     Popup:
         id: filePopup
@@ -59,7 +59,7 @@
                 text: 'Зареди'
                 on_release: 
                     filePopup.dismiss()
-                    root.loadArchive(self.selection)
+                    root.loadArchive(filePopup.selection)
            
     Popup:
         id: popup
