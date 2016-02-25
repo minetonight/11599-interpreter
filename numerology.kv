@@ -7,6 +7,7 @@
     # transparent buttons
     background_normal: '' 
     background_color: 1, 1, 1, 0
+    font_name: 'fonts/freesans.ttf' 
     
     on_press: root.controller.gridButtonPress(self)
     on_release: root.controller.gridButtonRelease(self)
@@ -15,7 +16,7 @@
     #font_size: '16dp'
     color: 1, 1, 0, 0.5
     bold: True 
-    
+    font_name: 'fonts/Roboto-Bold.ttf'
     
 <Controller>:
     orientation: 'vertical'
@@ -274,7 +275,7 @@
                         id: higherself_col
                         
                     GridButton:
-                        text: "/"
+                        text: "↗" 
                         name: 'sensual_diag'
                         id: sensual_diag
                     
