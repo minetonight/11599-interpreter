@@ -225,6 +225,7 @@
                     font_size: '42dp' 
                     bold: True 
                     name: 'full_meaning'
+                    font_name: 'fonts/Roboto-Bold.ttf'
                 
                 BoxLayout:
                     orientation: 'horizontal'              
@@ -240,6 +241,7 @@
                         text: '???????? = 28 = 10\n                       -2\n                      26 = 8'
                         id: cardStr_label
                         size_hint: 0.8, 1
+                        font_name: 'fonts/Roboto-Bold.ttf'
                     GridButton:
                         text: '??' 
                         name: 'personal_number' 
@@ -255,22 +257,23 @@
                     # start row 1
                         
                     GridButton:
-                        text: ''
+                        text: '⇖'
+                        #'⇱'
                         name: 'GB1'
                         id: GB1
                         
                     GridButton:
-                        #text: '|\nV'
+                        text: '↓'
                         name: 'self_col'
                         id: self_col
                         
                     GridButton:
-                        #text: '|\nV'
+                        text: '↓'
                         name: 'others_col'
                         id: others_col
                         
                     GridButton:
-                        #text: '|\nV'
+                        text: '↓'
                         name: 'higherself_col'
                         id: higherself_col
                         
@@ -304,7 +307,7 @@
                         id: 7
                         
                     GridButton:
-                        text: '<<<'
+                        text: '←'
                         name: 'sensitive_row'
                         id: sensitive_row
                         
@@ -333,7 +336,7 @@
                         id: 8
                         
                     GridButton:
-                        text: '<--'
+                        text: '←'
                         name: 'relational_row'
                         id: relational_row
                         
@@ -362,7 +365,7 @@
                         id: 9
                         
                     GridButton:
-                        text: '< < <'
+                        text: '←'
                         name: 'wise_row'
                         id: wise_row
                         
@@ -371,12 +374,12 @@
                     # 
                     
                     GridButton:
-                        text: ''
-                        name: 'GB21'
+                        text: '⊦' # this works '|-' 
+                        name: 'GB21' 
                         id: GB21
                         
                     GridButton:
-                        text: ''
+                        text: '⊐' # this works 'П' sideways 
                         name: 'none'
                         id: none
                         
@@ -387,11 +390,13 @@
                         
                     GridButton:
                         text: ''
+                        # '⇘' # not
+                        # '⇲' # not
                         name: 'nseven'
                         id: nseven
                         
                     GridButton:
-                        text: '\\'
+                        text: '↘' 
                         name: 'creational_diag'
                         id: creational_diag
                     
