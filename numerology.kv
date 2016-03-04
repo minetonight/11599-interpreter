@@ -16,8 +16,10 @@
     #font_size: '16dp'
     color: 1, 1, 0, 0.5
     bold: True 
-    font_name: 'fonts/Roboto-Bold.ttf'
-    
+    #font_name: 'fonts/Roboto-Bold.ttf'
+    #font_name: 'fonts/CODE2000.TTF'
+    #font_name: 'fonts/unifont_csur-8.0.01.ttf' 
+    #problem - font_name: 'fonts/unifont_upper-8.0.01.ttf'
 <Controller>:
     orientation: 'vertical'
     
@@ -309,7 +311,7 @@
                         id: 7
                         
                     GridButton:
-                        text: '←'
+                        text: '→'
                         name: 'sensitive_row'
                         id: sensitive_row
                         
@@ -318,9 +320,11 @@
                     # 
                     
                     GridButton:
-                        text: ''
-                        name: 'nzero'
+                        text: 'м \n~\nж' 
+                        # '♂♀⚤⚢' 
+                        name: 'nzero' 
                         id: nzero
+                        italic: True 
                         
                     CardButton:
                         text: '?22'
@@ -338,7 +342,7 @@
                         id: 8
                         
                     GridButton:
-                        text: '←'
+                        text: '→'
                         name: 'relational_row'
                         id: relational_row
                         
@@ -347,7 +351,7 @@
                     # 
                     
                     GridButton:
-                        text: ''
+                        text: '♔ ~ ♙'
                         name: 'GB16'
                         id: GB16
                         
@@ -367,7 +371,7 @@
                         id: 9
                         
                     GridButton:
-                        text: '←'
+                        text: '→'
                         name: 'wise_row'
                         id: wise_row
                         
