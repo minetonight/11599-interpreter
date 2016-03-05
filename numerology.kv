@@ -7,19 +7,25 @@
     # transparent buttons
     background_normal: '' 
     background_color: 1, 1, 1, 0
-    font_name: 'fonts/freesans.ttf' 
+    #font_name: 'fonts/freesans.ttf' 
+    #font_name: 'fonts/CODE2000.TTF'
+    font_name: 'fonts/unifont_csur-8.0.01.ttf' 
+    
+    font_size: '16dp'
     
     on_press: root.controller.gridButtonPress(self)
     on_release: root.controller.gridButtonRelease(self)
 
 <CardButton@GridButton>:
-    #font_size: '16dp'
+    font_size: '16dp'
     color: 1, 1, 0, 0.5
     bold: True 
-    #font_name: 'fonts/Roboto-Bold.ttf'
-    #font_name: 'fonts/CODE2000.TTF'
-    #font_name: 'fonts/unifont_csur-8.0.01.ttf' 
-    #problem - font_name: 'fonts/unifont_upper-8.0.01.ttf'
+    font_name: 'fonts/Roboto-Bold.ttf'
+
+<ArrowButton@GridButton>: 
+    font_size: '22dp'
+    font_name: 'fonts/unifont_csur-8.0.01.ttf'
+
 <Controller>:
     orientation: 'vertical'
     
@@ -259,29 +265,29 @@
                     # start row 1
                         
                     GridButton:
-                        text: '◸' # works 
+                        #text: '◸' # works 
                         # '◤'
                         #'⇖'
-                        #'⇱'
+                        text: '⇱'
                         name: 'GB1'
                         id: GB1
                         
-                    GridButton:
+                    ArrowButton:
                         text: '↓'
                         name: 'self_col'
                         id: self_col
                         
-                    GridButton:
+                    ArrowButton:
                         text: '↓'
                         name: 'others_col'
                         id: others_col
                         
-                    GridButton:
+                    ArrowButton:
                         text: '↓'
                         name: 'higherself_col'
                         id: higherself_col
                         
-                    GridButton:
+                    ArrowButton:
                         text: "↗" 
                         name: 'sensual_diag'
                         id: sensual_diag
@@ -289,12 +295,12 @@
                     #
                     # row 2 start
                     # 
-                        
+                    
                     GridButton:
-                        text: 'v\n^'
-                        name: 'ego_or_altru'
-                        id: ego_or_altru
-                        
+                        text: '♔\n~\n♙'
+                        name: 'GB16'
+                        id: GB16
+                     
                     CardButton:
                         text: '?11'
                         name: '1'
@@ -310,7 +316,7 @@
                         name: '7'
                         id: 7
                         
-                    GridButton:
+                    ArrowButton:
                         text: '→'
                         name: 'sensitive_row'
                         id: sensitive_row
@@ -320,11 +326,9 @@
                     # 
                     
                     GridButton:
-                        text: 'м \n~\nж' 
-                        # '♂♀⚤⚢' 
-                        name: 'nzero' 
-                        id: nzero
-                        italic: True 
+                        text: 'v\n^'
+                        name: 'ego_or_altru'
+                        id: ego_or_altru
                         
                     CardButton:
                         text: '?22'
@@ -341,7 +345,7 @@
                         name: '8'
                         id: 8
                         
-                    GridButton:
+                    ArrowButton:
                         text: '→'
                         name: 'relational_row'
                         id: relational_row
@@ -351,10 +355,11 @@
                     # 
                     
                     GridButton:
-                        text: '♔ ~ ♙'
-                        name: 'GB16'
-                        id: GB16
-                        
+                        #text: 'м \n~\nж' 
+                        text: '♂\n~\n♀' #⚤⚢' 
+                        name: 'nzero' 
+                        id: nzero
+                           
                     CardButton:
                         text: '?3'
                         name: '3'
@@ -370,7 +375,7 @@
                         name: '9'
                         id: 9
                         
-                    GridButton:
+                    ArrowButton:
                         text: '→'
                         name: 'wise_row'
                         id: wise_row
@@ -395,14 +400,14 @@
                         id: 0
                         
                     GridButton:
-                        text: '◿' # works
+                        #text: '◿' # works
                         # '◢'
                         # '⇘' # not
-                        # '⇲' # not
+                        text: '⇲' # not
                         name: 'nseven'
                         id: nseven
                         
-                    GridButton:
+                    ArrowButton:
                         text: '↘' 
                         name: 'creational_diag'
                         id: creational_diag
