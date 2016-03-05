@@ -9,7 +9,7 @@ class CardInterpreter:
     card_patterns_buttons = ["ego_or_altru", "sensitive_row", "relational_row", "wise_row", 
     'creational_diag', 'sensual_diag', 
     'self_col', 'others_col', 'higherself_col',  
-    'bolt_and_nut'] 
+    'male_and_female', 'bolt_and_nut', 'bird', 'anchor']
     
     
     def __init__(self, cardCalculator, readingType):
@@ -65,7 +65,7 @@ class CardInterpreter:
         
         #call all methods
         for b in buttons :
-            print "Button name=>"+b
+            #print "Button name=>"+b
             result += self.getMeaning(b)
             result += "\n\n"
         
@@ -85,7 +85,7 @@ class CardInterpreter:
             text = (
 '''#-*-coding:utf8;-*-
 
-buf = " още няма данни, попълни %s/%s" ''') % (folder, fname) 
+buf = " още няма данни, попълни %s/%s"\n ''') % (folder, fname) 
             f.write(text) 
             f.flush()
             f.seek(0)
