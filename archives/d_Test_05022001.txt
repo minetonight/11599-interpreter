@@ -46,11 +46,16 @@ personalNumber = 10
 Баланс на атруизма 6/5 
 Баланс на егоизма 3/5
 
- още няма данни, попълни card/sensitive
 
- още няма данни, попълни card/relational
 
- още няма данни, попълни card/wise
+
+
+
+
+Диагоналът за Творческа личност е запълнен
+Силата му е 8 при норма от 5
+
+
 
  още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
 
@@ -58,5 +63,5 @@ personalNumber = 10
 
  още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
 
- още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+ още няма данни, попълни card/emotional_diag
 

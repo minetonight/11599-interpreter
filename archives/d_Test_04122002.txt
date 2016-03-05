@@ -46,11 +46,15 @@ personalNumber = 11
 Баланс на атруизма 5/5 
 Баланс на егоизма 3/5
 
- още няма данни, попълни card/sensitive
 
- още няма данни, попълни card/relational
 
- още няма данни, попълни card/wise
+
+
+
+
+
+
+
 
  още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/self_col.py
 
@@ -58,5 +62,5 @@ personalNumber = 11
 
  още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/higherself_col.py
 
- още няма данни, попълни card//storage/emulated/0/Android/data/me.sheimi.sgit/files/repo/11599-interpreter/meanings/card/emotional_diag.py
+ още няма данни, попълни card/emotional_diag
 

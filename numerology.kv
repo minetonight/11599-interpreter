@@ -264,11 +264,10 @@
                     
                     # start row 1
                         
-                    GridButton:
-                        #text: '◸' # works 
+                    GridButton: 
                         # '◤'
                         #'⇖'
-                        text: '⇱'
+                        text: '⇱' # works 
                         name: 'GB1'
                         id: GB1
                         
@@ -385,14 +384,16 @@
                     # 
                     
                     GridButton:
-                        text: '⊦' # this works '|-' 
-                        name: 'GB21' 
-                        id: GB21
+                        text: ''
+                        name: 'none' 
+                        id: none
                         
                     GridButton:
-                        text: '⊐' # this works 'П' sideways 
-                        name: 'none'
-                        id: none
+                        text: '⊦ ⊐' # '|-' + П
+                        #text: '⊦' # works '|-'
+                        #text: '⊐' # works 'П' sideways 
+                        name: 'bolt_and_nut' 
+                        id: bolt_and_nut
                         
                     GridButton:
                         text: '?0'
@@ -400,10 +401,9 @@
                         id: 0
                         
                     GridButton:
-                        #text: '◿' # works
                         # '◢'
                         # '⇘' # not
-                        text: '⇲' # not
+                        text: '⇲' # works
                         name: 'nseven'
                         id: nseven
                         

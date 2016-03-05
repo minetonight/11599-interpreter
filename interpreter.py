@@ -9,7 +9,7 @@ class CardInterpreter:
     card_patterns_buttons = ["ego_or_altru", "sensitive_row", "relational_row", "wise_row", 
     'creational_diag', 'sensual_diag', 
     'self_col', 'others_col', 'higherself_col',  
-    'emotional_diag', ] 
+    'bolt_and_nut'] 
     
     
     def __init__(self, cardCalculator, readingType):
