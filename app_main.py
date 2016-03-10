@@ -23,7 +23,7 @@ class GridButton(Button):
 class Controller(BoxLayout):
     
     debug = False
-    #debug = True
+    debug = True
     
     t_name = ObjectProperty() 
     g_type = StringProperty() 
@@ -69,12 +69,17 @@ class Controller(BoxLayout):
             print("btn is " + str(btn.name) )
         
         if btn.name == 'full_meaning':
-            meaning = self.fullInfo 
+            meaning = self.fullInfo
+            
+            if self.debug:
+                print 'full info' 
+                print meaning[0:66] 
+             
         else:
             meaning = self.cardReader.getMeaning(btn.name)
         
-        self.popupText = meaning
         self.popup.title = "Значение за " + str(btn.name)
+        self.popupText = meaning
         self.popup.open()
     
     
@@ -117,7 +122,7 @@ class Controller(BoxLayout):
 
             # log reading
             self.cardReader = CardInterpreter(calculator, g_type)
-            self.fullInfo = self.cardReader.getFullInterpretation()
+            self.fullInfo = self.cardReader.getFullInterpretation() # checked, full info loaded
             
             archiveReading(g_type, birthday, name, self.fullInfo)
         
