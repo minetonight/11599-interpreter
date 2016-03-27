@@ -1,7 +1,10 @@
 #-*-coding:utf8;-*-
 
-buf = """ Imat zadacha da vodiat duhovno drugite
-Da gi vdahnoviavat, Koito kakto moge
-edni s грижа, drugi s nauka sas slovo no rabota za drugite personalna 
-I da ne tarsiat lichno shtastie, bitov живот, a samo rabota za duha
-Vagno e da ne narushavat morala  i vsichko shte poluchavat"""
+buf = """Имате за задача да водите духовно другите, 
+да ги вдъхновявате, по ваш свой си начин, както можете. 
+Може да е с грижа, или а наука, или със слово, 
+Вие работите с другите на лично ниво, персонална работа. 
+Не търсете лично щастие или битов живот, а само работа за духа. 
+Важно е да спазвате морала и ще получавате всичко необходимо."""
+
+
