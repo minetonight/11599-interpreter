@@ -1,3 +1,3 @@
 #-*-coding:utf8;-*-
 
-buf = self._getMeaning(folder, "3")
+buf = "няма данни още за 12" 

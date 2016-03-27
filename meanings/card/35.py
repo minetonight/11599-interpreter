@@ -1,3 +1,3 @@
 #-*-coding:utf8;-*-
 
-buf = " още няма данни, попълни card/35" 
+buf = self._getMeaning(folder, "33")
