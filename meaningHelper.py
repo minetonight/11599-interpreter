@@ -1,6 +1,6 @@
 #-*-coding:utf8;-*-
 from os.path import join, dirname
-import urllib, urllib.parse, urllib.request
+#import urllib, urllib.parse, urllib.request
 
 def archiveReading(g_type, birthday, name, fullInfo):
     curdir = dirname(__file__)
@@ -24,9 +24,9 @@ def pastebinShare(g_type, birthday, name, fullInfo):
     'api_paste_code':fullInfo, 
     'api_paste_name':fname}
     
-    url_vars = urllib.parse.urlencode(pastebin_vars)
-    print("http://pastebin.com/api/api_post.php?"+url_vars) 
-    url_vars = url_vars.encode('utf-8')
+    #url_vars = urllib.parse.urlencode(pastebin_vars)
+    #print("http://pastebin.com/api/api_post.php?"+url_vars) 
+    #url_vars = url_vars.encode('utf-8')
     
     result = 'pasteBin share is TBA'
     
