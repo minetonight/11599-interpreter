@@ -16,13 +16,13 @@ def archiveReading(g_type, birthday, name, fullInfo):
 def pastebinShare(g_type, birthday, name, fullInfo):
     fname = "%s_%s_%s.txt" % (g_type[0], name, birthday) 
     
-    pastebin_vars = {'api_dev_key':'8fa8dc71c640f0159758990f8e3ab5e6',
+    pastebin_vars = {'api_dev_key':'ztwMYWnoU4It7SHiEZlMLMWodHVRWMx2',
     'api_option':'paste', # a new paste
     'api_paste_private':'1', #unlisted
     'api_paste_expire_date':'1W', #1 week
     
     'api_paste_code':fullInfo, 
-    'api_paste_name':fname,}
+    'api_paste_name':fname}
     
     url_vars = urllib.parse.urlencode(pastebin_vars)
     print("http://pastebin.com/api/api_post.php?"+url_vars) 
@@ -31,10 +31,13 @@ def pastebinShare(g_type, birthday, name, fullInfo):
     result = ' '
     
     try:
-        response = urllib.request.urlopen('http://pastebin.com/api/api_post.php', url_vars)
-        result = response.read()
-    except IOError :
-        result = "IOError"
+        # https://stackoverflow.com/a/36485152
+        req = urllib.request.Request('http://pastebin.com/api/api_post.php', data=url_vars) 
+        #print(req.method)         
+        resp = urllib.request.urlopen(req) 
+        result = resp.read() 
+    except IOError as err :
+        result = str(err)
           
     return result  
     
