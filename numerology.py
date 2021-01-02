@@ -71,8 +71,8 @@ class CardCalculator:
     
     def formatProcess(self):
         
-        print("%s = %s = %s") % (self.birthday, self.personalNumber, self.personalNumberSimplified) 
-        print("%s & %s = %s == %s") % ( self.personalNumber, self.adjustment, self.adjusted, self.adjustedSimple) 
+        print(f"{self.birthday} = {self.personalNumber} = {self.personalNumberSimplified}") 
+        print(f"{self.personalNumber} & {self.adjustment} = {self.adjusted} == {self.adjustedSimple}")
         
         print(self.personalDate) 
         #print(self.personalNumber) 
@@ -80,7 +80,7 @@ class CardCalculator:
         print(self.card)
         
         
-    def __str__(calc):
+    def __str__(self):
         text = \
 """
 birthday = %s
@@ -102,23 +102,22 @@ personalNumber = %s
       |      |      
 """
         	
-        text = text % (calc.birthday, 
-        calc.personalNumberSimplified, 
-        "1" * calc.card[1], "4" * calc.card[4], "7" * calc.card[7], 
-        "2" * calc.card[2], "5" * calc.card[5], "8" * calc.card[8], 
-        "3" * calc.card[3], "6" * calc.card[6], "9" * calc.card[9], 
-        "0" * calc.card[0]) 
+        text = text % (self.birthday, 
+        self.personalNumberSimplified, 
+        "1" * self.card[1], "4" * self.card[4], "7" * self.card[7], 
+        "2" * self.card[2], "5" * self.card[5], "8" * self.card[8], 
+        "3" * self.card[3], "6" * self.card[6], "9" * self.card[9], 
+        "0" * self.card[0]) 
         return text
         
 #eof class
 
 if __name__ == "__main__":
-
     birthday = "21111985" #input("Enter full birthday e.g. ddmmyyyy") 
     print(birthday) 
     
     calculator = CardCalculator(birthday)
-    print str(calculator) 
+    print(calculator) 
 
 
 

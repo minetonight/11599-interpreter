@@ -81,21 +81,23 @@ class CardInterpreter:
         try:
             f = open(filename, "r") 
         except IOError:
-            f = open(filename, "w+r") 
+            f = open(filename, "w") 
             text = (
 '''#-*-coding:utf8;-*-
 
 buf = " още няма данни, попълни %s/%s"\n ''') % (folder, fname) 
             f.write(text) 
-            f.flush()
-            f.seek(0)
+            f.close()
+            f = open(filename, "r") 
             
         contents = f.read() 
-        #print(contents)
         f.close()
         
         #http://lucumr.pocoo.org/2011/2/1/exec-in-python/
-        exec(contents) 
+        #https://stackoverflow.com/a/1463370 update for python 3
+        localsDict = locals()
+        exec(contents, globals(), localsDict)
+        buf = localsDict['buf']
         # buf is defined in the file 
         return buf 
     #eof getMeaning(filename)
@@ -106,7 +108,7 @@ buf = " още няма данни, попълни %s/%s"\n ''') % (folder, fnam
 
 if __name__ == "__main__":
     cardReader = CardInterpreter( CardCalculator("21111985") , "event")
-    	
+    
     #print(cardReader.getFullInterpretation()) 
     print (cardReader._getMeaning("personalSum", "12")) 
     print ("Done") 

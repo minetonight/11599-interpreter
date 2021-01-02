@@ -48,11 +48,11 @@ class Controller(BoxLayout):
         date = parts[2][0:-4] # trim .txt
         
         if self.debug:
-            print filenames[0]
-            print filename
-            print parts
-            print name
-            print date
+            print(filenames[0])
+            print(filename)
+            print(parts)
+            print(name)
+            print(date)
         
         dictionary = {"d":"date","e":"year","y":"year","m":"male","f":"female"}
         #populate form
@@ -72,8 +72,8 @@ class Controller(BoxLayout):
             meaning = self.fullInfo
             
             if self.debug:
-                print 'full info' 
-                print meaning[0:66] 
+                print('full info')
+                print(meaning[0:66]) 
              
         else:
             meaning = self.cardReader.getMeaning(btn.name)
@@ -103,9 +103,9 @@ class Controller(BoxLayout):
     def processInput(self):
         #read form
         if self.debug:
-            print("name was %s") % (self.t_name.text) 
-            print("date was %s") % (self.t_date.text) 
-            print("type was %s") % (self.g_type)
+            print(f"name was {self.t_name.text}") 
+            print(f"date was {self.t_date.text}") 
+            print(f"type was {self.g_type}")
             
             if self.g_type == '':
                 self.g_type = "date" 
@@ -173,7 +173,7 @@ class NumerologyApp(App):
         
         #pstr = platform() 
         #if pstr == 'android':
-        if True:
+        if False:
             import android
             android.map_key(android.KEYCODE_MENU, 1000)
             android.map_key(android.KEYCODE_BACK, 1001)
@@ -196,7 +196,7 @@ class NumerologyApp(App):
         if key in [27, 1001] : # BACK
             if self.controller.debug:
                 print(screen) 
-                print "popup state" 
+                print("popup state") 
                 print( self.controller.popup.isOpen ) 
             
             if self.controller.popup.isOpen:
