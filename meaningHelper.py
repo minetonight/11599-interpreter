@@ -1,6 +1,6 @@
 #-*-coding:utf8;-*-
 from os.path import join, dirname
-import urllib
+import requests
 
 def archiveReading(g_type, birthday, name, fullInfo):
     curdir = dirname(__file__)
@@ -16,20 +16,23 @@ def archiveReading(g_type, birthday, name, fullInfo):
 def pastebinShare(g_type, birthday, name, fullInfo):
     fname = "%s_%s_%s.txt" % (g_type[0], name, birthday) 
     
-    pastebin_vars = {'api_dev_key':'8fa8dc71c640f0159758990f8e3ab5e6',
-    'api_option':'paste', # a new paste
-    'api_paste_private':'1', #unlisted
-    'api_paste_expire_date':'1W', #1 week
+    #from https://stackoverflow.com/questions/63077603/pastebin-api-invalid-api-dev-key
+    API_ENDPOINT = "https://pastebin.com/api/api_post.php"
+    data = {'api_dev_key':'ztwMYWnoU4It7SHiEZlMLMWodHVRWMx2',
+        'api_option':'paste', # a new paste
+        'api_paste_code':fullInfo, 
+        'api_paste_private':'1', #unlisted
+        'api_paste_expire_date':'1W', #1 week
+        'api_paste_name':fname
+    }
     
-    'api_paste_code':fullInfo, 
-    'api_paste_name':fname,}
     result = ' '
     
     try:
-        response = urllib.urlopen('http://pastebin.com/api/api_post.php', urllib.urlencode(pastebin_vars))
-        result = response.read()
-    except IOError :
-        result = "IOError"
+        resp = requests.post(url = API_ENDPOINT, data = data)
+        result = resp.text 
+    except IOError as err :
+        result = str(err)
           
     return result  
     
@@ -40,13 +43,8 @@ def pastebinShare(g_type, birthday, name, fullInfo):
 
 if __name__ == "__main__" :
     archiveReading("event", "01011987", "Test", "I know if you are going on pause.") 
-    res = pastebinShare("event", "01011987", "Амелия", "I know if you are going on pause.") 
-    print res
-    print ("Done") 
+    resp = pastebinShare("event", "01011987", "Амелия", "I know if you are going on pause.") 
     
-    
-    
-    
-    
-    
-    
+    print(resp) 
+    print("Done") 
+
